@@ -1,4 +1,6 @@
-﻿namespace MauiAppMinhasCompras
+﻿using Android.Views;
+
+namespace MauiAppMinhasCompras
 {
     public partial class App : Application
     {
@@ -9,7 +11,8 @@
 
         protected override Window CreateWindow(IActivationState? activationState)
         {
-            return new Window(new AppShell());
+            //return new Window(new AppShell());
+            MainPage = new NavigationPage(new Views.ListaProduto());
         }
     }
 }
